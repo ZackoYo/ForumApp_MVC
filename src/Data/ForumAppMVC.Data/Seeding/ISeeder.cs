@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Data.Seeding
+﻿namespace AspNetCoreTemplate.Data.Seeding
 {
     using System;
     using System.Threading.Tasks;

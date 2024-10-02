@@ -1,11 +1,11 @@
-﻿namespace ForumAppMVC.Data.Seeding
+﻿namespace AspNetCoreTemplate.Data.Seeding
 {
     using System;
     using System.Linq;
     using System.Threading.Tasks;
 
-    using ForumAppMVC.Common;
-    using ForumAppMVC.Data.Models;
+    using AspNetCoreTemplate.Common;
+    using AspNetCoreTemplate.Data.Models;
 
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.DependencyInjection;

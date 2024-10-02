@@ -1,9 +1,9 @@
-﻿namespace ForumAppMVC.Data
+﻿namespace AspNetCoreTemplate.Data
 {
     using System;
     using System.Threading.Tasks;
 
-    using ForumAppMVC.Data.Common;
+    using AspNetCoreTemplate.Data.Common;
 
     using Microsoft.EntityFrameworkCore;
 

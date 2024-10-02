@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Data.Common.Models
+﻿namespace AspNetCoreTemplate.Data.Common.Models
 {
     using System;
 

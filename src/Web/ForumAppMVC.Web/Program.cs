@@ -1,17 +1,17 @@
-﻿namespace ForumAppMVC.Web
+﻿namespace AspNetCoreTemplate.Web
 {
     using System.Reflection;
 
-    using ForumAppMVC.Data;
-    using ForumAppMVC.Data.Common;
-    using ForumAppMVC.Data.Common.Repositories;
-    using ForumAppMVC.Data.Models;
-    using ForumAppMVC.Data.Repositories;
-    using ForumAppMVC.Data.Seeding;
-    using ForumAppMVC.Services.Data;
-    using ForumAppMVC.Services.Mapping;
-    using ForumAppMVC.Services.Messaging;
-    using ForumAppMVC.Web.ViewModels;
+    using AspNetCoreTemplate.Data;
+    using AspNetCoreTemplate.Data.Common;
+    using AspNetCoreTemplate.Data.Common.Repositories;
+    using AspNetCoreTemplate.Data.Models;
+    using AspNetCoreTemplate.Data.Repositories;
+    using AspNetCoreTemplate.Data.Seeding;
+    using AspNetCoreTemplate.Services.Data;
+    using AspNetCoreTemplate.Services.Mapping;
+    using AspNetCoreTemplate.Services.Messaging;
+    using AspNetCoreTemplate.Web.ViewModels;
 
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Http;

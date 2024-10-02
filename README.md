@@ -4,7 +4,7 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 
 ## Build status
 
-[![Build Status](https://nikolayit.visualstudio.com/ForumAppMVC/_apis/build/status/NikolayIT.ASP.NET-Core-Template?branchName=master)](https://nikolayit.visualstudio.com/ForumAppMVC/_build/latest?definitionId=15&branchName=master)
+[![Build Status](https://nikolayit.visualstudio.com/ForumAppMvc/_apis/build/status/NikolayIT.ASP.NET-Core-Template?branchName=master)](https://nikolayit.visualstudio.com/ForumAppMvc/_build/latest?definitionId=15&branchName=master)
 
 ## Authors
 
@@ -14,10 +14,10 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 
 ## Package Installation
 
-You can install this template using [NuGet](https://www.nuget.org/packages/ForumAppMVC):
+You can install this template using [NuGet](https://www.nuget.org/packages/ForumAppMvc):
 
 ```powershell
-dotnet new -i ForumAppMVC
+dotnet new -i ForumAppMvc
 ```
 
 ```powershell
@@ -37,48 +37,48 @@ dotnet pack .\nuget.csproj
 
 ### Common
 
-**ForumAppMVC.Common** contains common things for the project solution. For example:
+**ForumAppMvc.Common** contains common things for the project solution. For example:
 
-- [GlobalConstants.cs](https://github.com/NikolayIT/ASP.NET-Core-Template/blob/master/src/ForumAppMVC.Common/GlobalConstants.cs).
+- [GlobalConstants.cs](https://github.com/NikolayIT/ASP.NET-Core-Template/blob/master/src/ForumAppMvc.Common/GlobalConstants.cs).
 
 ### Data
 
 This solution folder contains three subfolders:
 
-- ForumAppMVC.Data.Common
-- ForumAppMVC.Data.Models
-- ForumAppMVC.Data
+- ForumAppMvc.Data.Common
+- ForumAppMvc.Data.Models
+- ForumAppMvc.Data
 
-#### ForumAppMVC.Data.Common
+#### ForumAppMvc.Data.Common
 
-[ForumAppMVC.Data.Common.Models](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMVC.Data.Common/Models) provides abstract generics classes and interfaces, which holds information about our entities. For example when the object is Created, Modified, Deleted or IsDeleted. It contains a property for the primary key as well.
+[ForumAppMvc.Data.Common.Models](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMvc.Data.Common/Models) provides abstract generics classes and interfaces, which holds information about our entities. For example when the object is Created, Modified, Deleted or IsDeleted. It contains a property for the primary key as well.
 
-[ForumAppMVC.Data.Common.Repositories](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMVC.Data.Common/Repositories) provides two interfaces IDeletableEntityRepository and IRepository, which are part of the **repository pattern**.
+[ForumAppMvc.Data.Common.Repositories](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMvc.Data.Common/Repositories) provides two interfaces IDeletableEntityRepository and IRepository, which are part of the **repository pattern**.
 
-#### ForumAppMVC.Data.Models
+#### ForumAppMvc.Data.Models
 
-[ForumAppMVC.Data.Models](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMVC.Data.Models) contains ApplicationUser and ApplicationRole classes, which inherits IdentityRole and IdentityUsers.
+[ForumAppMvc.Data.Models](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMvc.Data.Models) contains ApplicationUser and ApplicationRole classes, which inherits IdentityRole and IdentityUsers.
 
-#### ForumAppMVC.Data
+#### ForumAppMvc.Data
 
-[ForumAppMVC.Data](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMVC.Data) contains DbContext, Migrations and Configuraitons for the EF Core.There is Seeding and Repository functionality as well.
+[ForumAppMvc.Data](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Data/ForumAppMvc.Data) contains DbContext, Migrations and Configuraitons for the EF Core.There is Seeding and Repository functionality as well.
 
 ### Services
 
 This solution folder contains four subfolders:
 
-- ForumAppMVC.Services.Data
-- ForumAppMVC.Services.Mapping
-- ForumAppMVC.Services.Messaging
-- ForumAppMVC.Services
+- ForumAppMvc.Services.Data
+- ForumAppMvc.Services.Mapping
+- ForumAppMvc.Services.Messaging
+- ForumAppMvc.Services
 
-#### ForumAppMVC.Services.Data
+#### ForumAppMvc.Services.Data
 
-[ForumAppMVC.Services.Data](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMVC.Services.Data) wil contains service layer logic.
+[ForumAppMvc.Services.Data](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMvc.Services.Data) wil contains service layer logic.
 
-#### ForumAppMVC.Services.Mapping
+#### ForumAppMvc.Services.Mapping
 
-[ForumAppMVC.Services.Mapping](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMVC.Services.Mapping) provides simplified functionlity for auto mapping. For example:
+[ForumAppMvc.Services.Mapping](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMvc.Services.Mapping) provides simplified functionlity for auto mapping. For example:
 
 ```csharp
 using Blog.Data.Models;
@@ -124,29 +124,29 @@ public class IndexPostViewModel : IMapFrom<Post>, IHaveCustomMappings
 
 ```
 
-#### ForumAppMVC.Services.Messaging
+#### ForumAppMvc.Services.Messaging
 
-[ForumAppMVC.Services.Messaging](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMVC.Services.Messaging) a ready to use integration with [SendGrid](https://sendgrid.com/).
+[ForumAppMvc.Services.Messaging](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMvc.Services.Messaging) a ready to use integration with [SendGrid](https://sendgrid.com/).
 
-#### ForumAppMVC.Services
+#### ForumAppMvc.Services
 
-[ForumAppMVC.Services](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMVC.Services)
+[ForumAppMvc.Services](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Services/ForumAppMvc.Services)
 
 ### Tests
 
 This solution folder contains three subfolders:
 
-- ForumAppMVC.Services.Data.Tests
-- ForumAppMVC.Web.Tests
+- ForumAppMvc.Services.Data.Tests
+- ForumAppMvc.Web.Tests
 - Sandbox
 
-#### ForumAppMVC.Services.Data.Tests
+#### ForumAppMvc.Services.Data.Tests
 
-[ForumAppMVC.Services.Data.Tests](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Tests/ForumAppMVC.Services.Data.Tests) holds unit tests for our service layer with ready setted up xUnit.
+[ForumAppMvc.Services.Data.Tests](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Tests/ForumAppMvc.Services.Data.Tests) holds unit tests for our service layer with ready setted up xUnit.
 
-#### ForumAppMVC.Web.Tests
+#### ForumAppMvc.Web.Tests
 
-[ForumAppMVC.Web.Tests](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Tests/ForumAppMVC.Web.Tests) setted up Selenuim tests.
+[ForumAppMvc.Web.Tests](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Tests/ForumAppMvc.Web.Tests) setted up Selenuim tests.
 
 #### Sandbox
 
@@ -156,21 +156,21 @@ This solution folder contains three subfolders:
 
 This solution folder contains three subfolders:
 
-- ForumAppMVC.Web.Infrastructure
-- ForumAppMVC.Web.ViewModels
-- ForumAppMVC.Web
+- ForumAppMvc.Web.Infrastructure
+- ForumAppMvc.Web.ViewModels
+- ForumAppMvc.Web
 
-#### ForumAppMVC.Web.Infrastructure
+#### ForumAppMvc.Web.Infrastructure
 
-[ForumAppMVC.Web.Infrastructure](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Web/ForumAppMVC.Web.Infrastructure) contains functionality like Middlewares and Filters.
+[ForumAppMvc.Web.Infrastructure](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Web/ForumAppMvc.Web.Infrastructure) contains functionality like Middlewares and Filters.
 
-#### ForumAppMVC.Web.ViewModels
+#### ForumAppMvc.Web.ViewModels
 
-[ForumAppMVC.Web.ViewModels](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Web/ForumAppMVC.Web.ViewModels) contains objects, which will be mapped from/to our entities and used in the front-end/back-end.
+[ForumAppMvc.Web.ViewModels](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Web/ForumAppMvc.Web.ViewModels) contains objects, which will be mapped from/to our entities and used in the front-end/back-end.
 
-#### ForumAppMVC.Web
+#### ForumAppMvc.Web
 
-[ForumAppMVC.Web](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Web/ForumAppMVC.Web) self explanatory.
+[ForumAppMvc.Web](https://github.com/NikolayIT/ASP.NET-Core-Template/tree/master/src/Web/ForumAppMvc.Web) self explanatory.
 
 ## Support
 

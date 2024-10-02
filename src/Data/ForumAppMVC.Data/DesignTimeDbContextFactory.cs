@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Data
+﻿namespace AspNetCoreTemplate.Data
 {
     using System.IO;
 

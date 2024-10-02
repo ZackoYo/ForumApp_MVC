@@ -1,8 +1,8 @@
-﻿namespace ForumAppMVC.Data.Common.Repositories
+﻿namespace AspNetCoreTemplate.Data.Common.Repositories
 {
     using System.Linq;
 
-    using ForumAppMVC.Data.Common.Models;
+    using AspNetCoreTemplate.Data.Common.Models;
 
     public interface IDeletableEntityRepository<TEntity> : IRepository<TEntity>
         where TEntity : class, IDeletableEntity

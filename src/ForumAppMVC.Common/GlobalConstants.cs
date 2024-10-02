@@ -1,8 +1,8 @@
-﻿namespace ForumAppMVC.Common
+﻿namespace AspNetCoreTemplate.Common
 {
     public static class GlobalConstants
     {
-        public const string SystemName = "ForumAppMVC";
+        public const string SystemName = "AspNetCoreTemplate";
 
         public const string AdministratorRoleName = "Administrator";
     }

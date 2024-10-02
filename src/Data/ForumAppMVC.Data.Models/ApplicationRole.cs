@@ -1,9 +1,9 @@
 ﻿// ReSharper disable VirtualMemberCallInConstructor
-namespace ForumAppMVC.Data.Models
+namespace AspNetCoreTemplate.Data.Models
 {
     using System;
 
-    using ForumAppMVC.Data.Common.Models;
+    using AspNetCoreTemplate.Data.Common.Models;
 
     using Microsoft.AspNetCore.Identity;
 

@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Web.Tests
+﻿namespace AspNetCoreTemplate.Web.Tests
 {
     using System.Net;
     using System.Threading.Tasks;

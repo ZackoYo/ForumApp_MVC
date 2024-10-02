@@ -27,8 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data\ForumAppMVC.Data.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Data\ForumAppMVC.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data\AspNetCoreTemplate.Data.csproj" />
+    <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services.Data\AspNetCoreTemplate.Services.Data.csproj" />
   </ItemGroup>
 
 </Project>

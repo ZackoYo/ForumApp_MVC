@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Data.Common.Repositories
+﻿namespace AspNetCoreTemplate.Data.Common.Repositories
 {
     using System;
     using System.Linq;

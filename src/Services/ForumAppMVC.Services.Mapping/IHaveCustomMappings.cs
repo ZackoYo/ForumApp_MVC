@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Services.Mapping
+﻿namespace AspNetCoreTemplate.Services.Mapping
 {
     using AutoMapper;
 

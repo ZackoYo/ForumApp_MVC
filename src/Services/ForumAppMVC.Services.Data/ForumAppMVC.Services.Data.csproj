@@ -19,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Common\ForumAppMVC.Data.Common.csproj" />
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Models\ForumAppMVC.Data.Models.csproj" />
-    <ProjectReference Include="..\ForumAppMVC.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data.Common\AspNetCoreTemplate.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data.Models\AspNetCoreTemplate.Data.Models.csproj" />
+    <ProjectReference Include="..\AspNetCoreTemplate.Services.Mapping\AspNetCoreTemplate.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

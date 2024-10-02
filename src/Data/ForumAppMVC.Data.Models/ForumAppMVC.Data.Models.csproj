@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ForumAppMVC.Data.Common\ForumAppMVC.Data.Common.csproj" />
+    <ProjectReference Include="..\AspNetCoreTemplate.Data.Common\AspNetCoreTemplate.Data.Common.csproj" />
   </ItemGroup>
   
 </Project>

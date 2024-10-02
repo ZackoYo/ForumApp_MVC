@@ -1,10 +1,10 @@
-﻿namespace ForumAppMVC.Data.Seeding
+﻿namespace AspNetCoreTemplate.Data.Seeding
 {
     using System;
     using System.Linq;
     using System.Threading.Tasks;
 
-    using ForumAppMVC.Data.Models;
+    using AspNetCoreTemplate.Data.Models;
 
     internal class SettingsSeeder : ISeeder
     {

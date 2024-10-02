@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Services.Messaging
+﻿namespace AspNetCoreTemplate.Services.Messaging
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;

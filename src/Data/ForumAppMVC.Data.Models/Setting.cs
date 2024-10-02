@@ -1,6 +1,6 @@
-﻿namespace ForumAppMVC.Data.Models
+﻿namespace AspNetCoreTemplate.Data.Models
 {
-    using ForumAppMVC.Data.Common.Models;
+    using AspNetCoreTemplate.Data.Common.Models;
 
     public class Setting : BaseDeletableModel<int>
     {

@@ -1,4 +1,4 @@
-﻿namespace ForumAppMVC.Web.Controllers
+﻿namespace AspNetCoreTemplate.Web.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
 
