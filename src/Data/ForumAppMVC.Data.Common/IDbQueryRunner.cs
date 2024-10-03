@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Data.Common
+﻿namespace ForumAppMVC.Data.Common
 {
     using System;
     using System.Threading.Tasks;

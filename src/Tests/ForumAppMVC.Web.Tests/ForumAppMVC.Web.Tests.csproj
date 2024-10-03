@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Web\AspNetCoreTemplate.Web\AspNetCoreTemplate.Web.csproj" />
+    <ProjectReference Include="..\..\Web\ForumAppMVC.Web\ForumAppMVC.Web.csproj" />
   </ItemGroup>
 
 </Project>

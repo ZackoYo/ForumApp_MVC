@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Web.ViewModels
+﻿namespace ForumAppMVC.Web.ViewModels
 {
     public class ErrorViewModel
     {

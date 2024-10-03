@@ -1,6 +1,6 @@
-﻿namespace AspNetCoreTemplate.Data.Configurations
+﻿namespace ForumAppMVC.Data.Configurations
 {
-    using AspNetCoreTemplate.Data.Models;
+    using ForumAppMVC.Data.Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

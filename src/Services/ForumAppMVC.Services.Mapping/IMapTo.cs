@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Services.Mapping
+﻿namespace ForumAppMVC.Services.Mapping
 {
     // ReSharper disable once UnusedTypeParameter
     public interface IMapTo<T>

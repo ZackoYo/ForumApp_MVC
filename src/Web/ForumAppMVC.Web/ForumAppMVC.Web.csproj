@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <UserSecretsId>aspnet-AspNetCoreTemplate-BBB373B5-EF3F-4DBB-B8AA-7152CEC275BF</UserSecretsId>
+    <UserSecretsId>aspnet-ForumAppMVC-BBB373B5-EF3F-4DBB-B8AA-7152CEC275BF</UserSecretsId>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
@@ -14,7 +14,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<InternalsVisibleTo Include="AspNetCoreTemplate.Web.Tests" />
+		<InternalsVisibleTo Include="ForumAppMVC.Web.Tests" />
 	</ItemGroup>
 
   <ItemGroup>
@@ -30,14 +30,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AspNetCoreTemplate.Common\AspNetCoreTemplate.Common.csproj" />
-    <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data.Models\AspNetCoreTemplate.Data.Models.csproj" />
-    <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data\AspNetCoreTemplate.Data.csproj" />
-    <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services.Data\AspNetCoreTemplate.Services.Data.csproj" />
-    <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services.Mapping\AspNetCoreTemplate.Services.Mapping.csproj" />
-    <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services.Messaging\AspNetCoreTemplate.Services.Messaging.csproj" />
-    <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services\AspNetCoreTemplate.Services.csproj" />
-    <ProjectReference Include="..\AspNetCoreTemplate.Web.Infrastructure\AspNetCoreTemplate.Web.Infrastructure.csproj" />
-    <ProjectReference Include="..\AspNetCoreTemplate.Web.ViewModels\AspNetCoreTemplate.Web.ViewModels.csproj" />
+    <ProjectReference Include="..\..\ForumAppMVC.Common\ForumAppMVC.Common.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Models\ForumAppMVC.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMVC.Data\ForumAppMVC.Data.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Data\ForumAppMVC.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Messaging\ForumAppMVC.Services.Messaging.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMVC.Services\ForumAppMVC.Services.csproj" />
+    <ProjectReference Include="..\ForumAppMVC.Web.Infrastructure\ForumAppMVC.Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\ForumAppMVC.Web.ViewModels\ForumAppMVC.Web.ViewModels.csproj" />
   </ItemGroup>
 </Project>

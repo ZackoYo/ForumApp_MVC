@@ -1,10 +1,10 @@
-﻿namespace AspNetCoreTemplate.Data.Repositories
+﻿namespace ForumAppMVC.Data.Repositories
 {
     using System;
     using System.Linq;
     using System.Threading.Tasks;
 
-    using AspNetCoreTemplate.Data.Common.Repositories;
+    using ForumAppMVC.Data.Common.Repositories;
 
     using Microsoft.EntityFrameworkCore;
 

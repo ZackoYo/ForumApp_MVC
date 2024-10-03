@@ -1,8 +1,8 @@
-﻿namespace AspNetCoreTemplate.Data
+﻿namespace ForumAppMVC.Data
 {
     using System.Linq;
 
-    using AspNetCoreTemplate.Data.Common.Models;
+    using ForumAppMVC.Data.Common.Models;
 
     using Microsoft.EntityFrameworkCore;
 

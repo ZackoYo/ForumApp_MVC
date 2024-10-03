@@ -1,7 +1,7 @@
-﻿namespace AspNetCoreTemplate.Web.Areas.Administration.Controllers
+﻿namespace ForumAppMVC.Web.Areas.Administration.Controllers
 {
-    using AspNetCoreTemplate.Common;
-    using AspNetCoreTemplate.Web.Controllers;
+    using ForumAppMVC.Common;
+    using ForumAppMVC.Web.Controllers;
 
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

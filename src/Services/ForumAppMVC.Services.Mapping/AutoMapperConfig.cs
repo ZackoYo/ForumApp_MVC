@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Services.Mapping
+﻿namespace ForumAppMVC.Services.Mapping
 {
     using System;
     using System.Collections.Generic;

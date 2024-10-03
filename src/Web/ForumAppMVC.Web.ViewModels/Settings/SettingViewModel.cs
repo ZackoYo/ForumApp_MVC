@@ -1,7 +1,7 @@
-﻿namespace AspNetCoreTemplate.Web.ViewModels.Settings
+﻿namespace ForumAppMVC.Web.ViewModels.Settings
 {
-    using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Mapping;
+    using ForumAppMVC.Data.Models;
+    using ForumAppMVC.Services.Mapping;
 
     using AutoMapper;
 
