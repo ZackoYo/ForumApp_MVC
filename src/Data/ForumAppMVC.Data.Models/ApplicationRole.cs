@@ -1,31 +1,30 @@
 ﻿// ReSharper disable VirtualMemberCallInConstructor
-namespace ForumAppMVC.Data.Models
+namespace ForumAppMVC.Data.Models;
+
+using System;
+
+using ForumAppMVC.Data.Common.Models;
+
+using Microsoft.AspNetCore.Identity;
+
+public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
 {
-    using System;
+	public ApplicationRole()
+		: this(null)
+	{
+	}
 
-    using ForumAppMVC.Data.Common.Models;
+	public ApplicationRole(string name)
+		: base(name)
+	{
+		this.Id = Guid.NewGuid().ToString();
+	}
 
-    using Microsoft.AspNetCore.Identity;
+	public DateTime CreatedOn { get; set; }
 
-    public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
-    {
-        public ApplicationRole()
-            : this(null)
-        {
-        }
+	public DateTime? ModifiedOn { get; set; }
 
-        public ApplicationRole(string name)
-            : base(name)
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
+	public bool IsDeleted { get; set; }
 
-        public DateTime CreatedOn { get; set; }
-
-        public DateTime? ModifiedOn { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
-    }
+	public DateTime? DeletedOn { get; set; }
 }

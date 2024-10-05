@@ -5,6 +5,8 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using CommandLine;
+
     using ForumAppMVC.Data;
     using ForumAppMVC.Data.Common;
     using ForumAppMVC.Data.Common.Repositories;
@@ -13,8 +15,6 @@
     using ForumAppMVC.Data.Seeding;
     using ForumAppMVC.Services.Data;
     using ForumAppMVC.Services.Messaging;
-
-    using CommandLine;
 
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
