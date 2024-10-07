@@ -1,19 +1,17 @@
-﻿
-using ForumAppMVC.Data.Models;
-using System;
-using System.Linq;
-using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
-
-using ForumAppMVC.Data.Common.Models;
-using ForumAppMvc.Data.Models;
-
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace ForumAppMVC.Data
+﻿namespace ForumAppMVC.Data
 {
+	using System;
+	using System.Linq;
+	using System.Reflection;
+	using System.Threading;
+	using System.Threading.Tasks;
+
+	using ForumAppMVC.Data.Common.Models;
+	using ForumAppMvc.Data.Models;
+	using Models;
+	using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+	using Microsoft.EntityFrameworkCore;
+
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
 	{
 		private static readonly MethodInfo SetIsDeletedQueryFilterMethod =
@@ -30,7 +28,6 @@ namespace ForumAppMVC.Data
 		public DbSet<Category> Categories { get; set; }
 		public DbSet<Post> Posts { get; set; }
 		public DbSet<Comment> Comments { get; set; }
-
 		public override int SaveChanges() => this.SaveChanges(true);
 
 		public override int SaveChanges(bool acceptAllChangesOnSuccess)

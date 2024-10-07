@@ -1,4 +1,6 @@
-﻿namespace ForumAppMVC.Data.Seeding
+﻿using ForumAppMvc.Data.Seeding;
+
+namespace ForumAppMVC.Data.Seeding
 {
     using System;
     using System.Collections.Generic;
@@ -27,6 +29,7 @@
                           {
                               new RolesSeeder(),
                               new SettingsSeeder(),
+                              new CategoriesSeeder(),
                           };
 
             foreach (var seeder in seeders)

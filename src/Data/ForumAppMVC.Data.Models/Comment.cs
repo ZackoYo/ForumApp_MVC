@@ -1,7 +1,7 @@
-﻿namespace ForumAppMvc.Data.Models;
-
-using ForumAppMVC.Data.Common.Models;
+﻿using ForumAppMVC.Data.Common.Models;
 using ForumAppMVC.Data.Models;
+
+namespace ForumAppMvc.Data.Models;
 
 public class Comment : BaseDeletableModel<int>
 {

@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
-using ForumAppMVC.Data.Common.Models;
+﻿namespace ForumAppMvc.Data.Models;
 
-namespace ForumAppMvc.Data.Models;
+using System.Collections.Generic;
+using ForumAppMVC.Data.Common.Models;
 
 public class Category : BaseDeletableModel<int>
 {
 	public Category()
 	{
-		this.Posts = new HashSet<Post>();
+        this.Posts = new HashSet<Post>();
 	}
+
 	public string Name { get; set; }
 
 	public string Title { get; set; }
@@ -17,5 +18,5 @@ public class Category : BaseDeletableModel<int>
 
 	public string ImageUrl { get; set; }
 
-	public virtual ICollection<Post> Posts{ get; set; }
+	public virtual ICollection<Post> Posts { get; set; }
 }
