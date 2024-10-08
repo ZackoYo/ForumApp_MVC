@@ -100,7 +100,8 @@ namespace ForumAppMVC.Web
 			app.UseAuthorization();
 
 			app.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-			app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+			app.MapControllerRoute("forumCategory", "f/{name:minlength(3)}", new {controller = "Categories", action = "ByName"});
+            app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
 			app.MapRazorPages();
 		}
 	}

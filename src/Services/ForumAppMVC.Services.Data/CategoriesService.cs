@@ -25,5 +25,12 @@ namespace ForumAppMVC.Services.Data
 
             return query.To<T>().ToList();
         }
+
+        public T GetByName<T>(string name)
+        {
+            var category = this.categoriesRepo.All().Where(c => c.Name == name).To<T>().FirstOrDefault();
+
+                return category;
+        }
     }
 }
