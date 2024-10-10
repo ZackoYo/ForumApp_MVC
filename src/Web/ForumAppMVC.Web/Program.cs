@@ -65,7 +65,8 @@ namespace ForumAppMVC.Web
 			services.AddTransient<IEmailSender>(s => new SendGridEmailSender("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"));
 			services.AddTransient<ISettingsService, SettingsService>();
 			services.AddTransient<ICategoriesService, CategoriesService>();
-		}
+            services.AddTransient<IPostsService, PostsService>();
+        }
 
 		private static void Configure(WebApplication app)
 		{
