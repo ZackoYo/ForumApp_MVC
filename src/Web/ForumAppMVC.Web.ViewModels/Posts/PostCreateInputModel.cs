@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ForumAppMVC.Web.ViewModels.Posts
 {
@@ -12,7 +13,8 @@ namespace ForumAppMVC.Web.ViewModels.Posts
 
         [Range(1, int.MaxValue)]
         [Display(Name = "Category")]
-
         public int CategoryId { get; set; }
+
+        public IEnumerable<CategoryDropDownViewModel> Categories { get; set; }
     }
 }

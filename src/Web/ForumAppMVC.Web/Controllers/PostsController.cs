@@ -32,12 +32,12 @@ namespace ForumAppMVC.Web.Controllers
         [Authorize]
         public IActionResult Create()
         {
-            //var categories = this.categoriesService.GetAll<CategoryDropDownViewModel>();
-            //var viewModel = new PostCreateInputModel
-            //{
-            //    Categories = categories,
-            //};
-            return this.View();
+            var categories = this.categoriesService.GetAll<CategoryDropDownViewModel>();
+            var viewModel = new PostCreateInputModel
+            {
+                Categories = categories,
+            };
+            return this.View(viewModel);
         }
 
         [HttpPost]

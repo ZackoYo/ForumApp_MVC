@@ -51,7 +51,8 @@ namespace ForumAppMVC.Web
 				{
 					options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
 				}).AddRazorRuntimeCompilation();
-			services.AddRazorPages();
+
+            services.AddRazorPages();
 			services.AddDatabaseDeveloperPageExceptionFilter();
 
 			services.AddSingleton(configuration);
