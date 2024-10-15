@@ -37,7 +37,7 @@ namespace ForumAppMVC.Web.Controllers
             {
                 Categories = categories,
             };
-            return this.View(viewModel);
+            return View(viewModel);
         }
 
         [HttpPost]
