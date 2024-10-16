@@ -1,6 +1,8 @@
 ﻿using ForumAppMVC.Data.Common.Repositories;
 using ForumAppMVC.Data.Models;
+using System.Linq;
 using System.Threading.Tasks;
+using ForumAppMVC.Services.Mapping;
 
 namespace ForumAppMVC.Services.Data
 {
@@ -26,6 +28,14 @@ namespace ForumAppMVC.Services.Data
             await this.postsRepo.SaveChangesAsync();
 
             return post.Id;
+        }
+
+        public T GetById<T>(int id)
+        {
+            var post = this.postsRepo.All().Where(x => x.Id == id)
+                .To<T>().FirstOrDefault();
+
+            return post;
         }
     }
 }
