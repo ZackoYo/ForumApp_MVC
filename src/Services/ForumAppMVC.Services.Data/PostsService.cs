@@ -1,7 +1,7 @@
-﻿using ForumAppMVC.Data.Common.Repositories;
-using ForumAppMVC.Data.Models;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using ForumAppMVC.Data.Common.Repositories;
+using ForumAppMVC.Data.Models;
 using ForumAppMVC.Services.Mapping;
 
 namespace ForumAppMVC.Services.Data

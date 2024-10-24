@@ -1,8 +1,8 @@
-﻿using ForumAppMVC.Data.Common.Repositories;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ForumAppMVC.Data.Common.Repositories;
 using ForumAppMVC.Data.Models;
 using ForumAppMVC.Services.Mapping;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ForumAppMVC.Services.Data
 {

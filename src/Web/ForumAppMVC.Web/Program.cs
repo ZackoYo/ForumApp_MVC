@@ -67,6 +67,7 @@ namespace ForumAppMVC.Web
 			services.AddTransient<ISettingsService, SettingsService>();
 			services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IPostsService, PostsService>();
+			services.AddTransient<IVotesService, VotesService>();
         }
 
 		private static void Configure(WebApplication app)
