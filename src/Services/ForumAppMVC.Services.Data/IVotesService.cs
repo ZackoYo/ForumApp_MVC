@@ -4,6 +4,8 @@ namespace ForumAppMVC.Services.Data
 {
     public interface IVotesService
     {
+        int GetVotes(int postId);
+
         /// <summary>
         /// </summary>
         /// <param name="postId"></param>
