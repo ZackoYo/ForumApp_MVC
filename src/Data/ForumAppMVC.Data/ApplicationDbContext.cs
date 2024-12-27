@@ -1,20 +1,19 @@
 ﻿
 using ForumAppMVC.Data.Models;
+using System;
+using System.Linq;
+using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
+
+using ForumAppMVC.Data.Common.Models;
+using ForumAppMvc.Data.Models;
+
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace ForumAppMVC.Data
 {
-	using System;
-	using System.Linq;
-	using System.Reflection;
-	using System.Threading;
-	using System.Threading.Tasks;
-
-	using ForumAppMVC.Data.Common.Models;
-	using ForumAppMvc.Data.Models;
-
-	using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-	using Microsoft.EntityFrameworkCore;
-
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
 	{
 		private static readonly MethodInfo SetIsDeletedQueryFilterMethod =
