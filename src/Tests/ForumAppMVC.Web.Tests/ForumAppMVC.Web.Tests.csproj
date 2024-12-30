@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Web\ForumAppMVC.Web\ForumAppMVC.Web.csproj" />
+    <ProjectReference Include="..\..\Web\ForumAppMvc.Web\ForumAppMVC.Web.csproj" />
   </ItemGroup>
 
 </Project>

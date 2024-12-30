@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data\ForumAppMVC.Data.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Data\ForumAppMVC.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMvc.Data\ForumAppMVC.Data.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMvc.Services.Data\ForumAppMVC.Services.Data.csproj" />
   </ItemGroup>
 
 </Project>

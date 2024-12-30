@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ForumAppMVC.Data.Common\ForumAppMVC.Data.Common.csproj" />
+    <ProjectReference Include="..\ForumAppMvc.Data.Common\ForumAppMVC.Data.Common.csproj" />
   </ItemGroup>
   
 </Project>

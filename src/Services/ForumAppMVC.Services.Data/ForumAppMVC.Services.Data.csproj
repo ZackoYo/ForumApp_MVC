@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Common\ForumAppMVC.Data.Common.csproj" />
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Models\ForumAppMVC.Data.Models.csproj" />
-    <ProjectReference Include="..\ForumAppMVC.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMvc.Data.Common\ForumAppMVC.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMvc.Data.Models\ForumAppMVC.Data.Models.csproj" />
+    <ProjectReference Include="..\ForumAppMvc.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

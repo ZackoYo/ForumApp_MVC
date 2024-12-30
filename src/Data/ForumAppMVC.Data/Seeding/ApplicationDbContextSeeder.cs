@@ -1,4 +1,4 @@
-﻿using ForumAppMvc.Data.Seeding;
+﻿using ForumAppMVC.Data.Seeding;
 
 namespace ForumAppMVC.Data.Seeding
 {

@@ -1,4 +1,4 @@
-﻿namespace ForumAppMvc.Data.Models;
+﻿namespace ForumAppMVC.Data.Models;
 
 using System.Collections.Generic;
 using ForumAppMVC.Data.Common.Models;

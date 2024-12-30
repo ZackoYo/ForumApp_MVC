@@ -7,8 +7,7 @@
 	using System.Threading.Tasks;
 
 	using ForumAppMVC.Data.Common.Models;
-	using ForumAppMvc.Data.Models;
-	using Models;
+	using ForumAppMVC.Data.Models;
 	using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 	using Microsoft.EntityFrameworkCore;
 

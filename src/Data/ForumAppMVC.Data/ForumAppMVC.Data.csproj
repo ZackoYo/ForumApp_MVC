@@ -36,9 +36,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ForumAppMVC.Common\ForumAppMVC.Common.csproj" />
-    <ProjectReference Include="..\ForumAppMVC.Data.Common\ForumAppMVC.Data.Common.csproj" />
-    <ProjectReference Include="..\ForumAppMVC.Data.Models\ForumAppMVC.Data.Models.csproj" />
+    <ProjectReference Include="..\..\ForumAppMvc.Common\ForumAppMVC.Common.csproj" />
+    <ProjectReference Include="..\ForumAppMvc.Data.Common\ForumAppMVC.Data.Common.csproj" />
+    <ProjectReference Include="..\ForumAppMvc.Data.Models\ForumAppMVC.Data.Models.csproj" />
   </ItemGroup>
 
 </Project>

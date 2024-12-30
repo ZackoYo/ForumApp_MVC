@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Models\ForumAppMVC.Data.Models.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMvc.Data.Models\ForumAppMVC.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMvc.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

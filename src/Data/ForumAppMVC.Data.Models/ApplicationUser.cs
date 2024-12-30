@@ -1,6 +1,6 @@
 ﻿// ReSharper disable VirtualMemberCallInConstructor
 
-using ForumAppMvc.Data.Models;
+using ForumAppMVC.Data.Models;
 
 namespace ForumAppMVC.Data.Models;
 

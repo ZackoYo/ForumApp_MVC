@@ -178,7 +178,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Settings");
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Category", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -217,7 +217,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Comment", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -257,7 +257,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Post", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -406,9 +406,9 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Comment", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Comment", b =>
                 {
-                    b.HasOne("ForumAppMvc.Data.Models.Post", "Post")
+                    b.HasOne("ForumAppMVC.Data.Models.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -423,9 +423,9 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Post", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Post", b =>
                 {
-                    b.HasOne("ForumAppMvc.Data.Models.Category", "Category")
+                    b.HasOne("ForumAppMVC.Data.Models.Category", "Category")
                         .WithMany("Posts")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -502,12 +502,12 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Navigation("Roles");
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Category", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Category", b =>
                 {
                     b.Navigation("Posts");
                 });
 
-            modelBuilder.Entity("ForumAppMvc.Data.Models.Post", b =>
+            modelBuilder.Entity("ForumAppMVC.Data.Models.Post", b =>
                 {
                     b.Navigation("Comments");
                 });

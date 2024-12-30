@@ -27,14 +27,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ForumAppMVC.Common\ForumAppMVC.Common.csproj" />
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data.Models\ForumAppMVC.Data.Models.csproj" />
-    <ProjectReference Include="..\..\Data\ForumAppMVC.Data\ForumAppMVC.Data.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Data\ForumAppMVC.Services.Data.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services.Messaging\ForumAppMVC.Services.Messaging.csproj" />
-    <ProjectReference Include="..\..\Services\ForumAppMVC.Services\ForumAppMVC.Services.csproj" />
-    <ProjectReference Include="..\ForumAppMVC.Web.Infrastructure\ForumAppMVC.Web.Infrastructure.csproj" />
-    <ProjectReference Include="..\ForumAppMVC.Web.ViewModels\ForumAppMVC.Web.ViewModels.csproj" />
+    <ProjectReference Include="..\..\ForumAppMvc.Common\ForumAppMVC.Common.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMvc.Data.Models\ForumAppMVC.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\ForumAppMvc.Data\ForumAppMVC.Data.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMvc.Services.Data\ForumAppMVC.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMvc.Services.Mapping\ForumAppMVC.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMvc.Services.Messaging\ForumAppMVC.Services.Messaging.csproj" />
+    <ProjectReference Include="..\..\Services\ForumAppMvc.Services\ForumAppMVC.Services.csproj" />
+    <ProjectReference Include="..\ForumAppMvc.Web.Infrastructure\ForumAppMVC.Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\ForumAppMvc.Web.ViewModels\ForumAppMVC.Web.ViewModels.csproj" />
   </ItemGroup>
 </Project>
