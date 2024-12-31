@@ -1,49 +1,40 @@
 ﻿using ForumAppMVC.Web.ViewModels.Home;
 using System.Diagnostics;
-using System.Linq;
-using ForumAppMVC.Data;
 using ForumAppMVC.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using ForumAppMVC.Data.Models;
-using ForumAppMVC.Data.Common.Repositories;
+using ForumAppMVC.Services.Data;
 
 namespace ForumAppMVC.Web.Controllers
 {
-	public class HomeController : BaseController
-	{
-        private readonly IDeletableEntityRepository<Category> categoriesRepository;
+    public class HomeController : BaseController
+    {
+        private readonly ICategoriesService categoriesService;
 
-        public HomeController(IDeletableEntityRepository<Category> categoriesRepository)
-		{
-            this.categoriesRepository = categoriesRepository;
+        public HomeController(ICategoriesService categoriesService)
+        {
+            this.categoriesService = categoriesService;
         }
 
-		public IActionResult Index()
-		{
-			var viewModel = new IndexViewModel();
-			var categories = this.categoriesRepository.All().Select(x => new IndexCategoryViewModel
-			{
-				Description = x.Description,
-				ImageUrl = x.ImageUrl,
-				Name = x.Name,
-				Title = x.Title
-			}).ToList();
+        public IActionResult Index()
+        {
+            var viewModel = new IndexViewModel
+            {
+                Categories =
+                    this.categoriesService.GetAll<IndexCategoryViewModel>(),
+            };
+            return this.View(viewModel);
+        }
 
-			viewModel.Categories = categories;
+        public IActionResult Privacy()
+        {
+            return this.View();
+        }
 
-			return this.View(viewModel);
-		}
-
-		public IActionResult Privacy()
-		{
-			return this.View();
-		}
-
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
-		{
-			return this.View(
-				new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
-		}
-	}
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return this.View(
+                new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
+        }
+    }
 }
