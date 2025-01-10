@@ -5,4 +5,4 @@
 
 <h1>@Model.Title</h1>
 
-@Model.Content
+@Html.Raw(@Model.SanitizedContent)

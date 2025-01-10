@@ -11,6 +11,9 @@
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HtmlSanitizer" Version="8.1.870" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\ForumAppMvc.Data.Models\ForumAppMVC.Data.Models.csproj" />
