@@ -9,6 +9,7 @@ namespace ForumAppMVC.Web.ViewModels.Posts
 {
     public class PostViewModel : IMapFrom<Post>, IHaveCustomMappings
     {
+        public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }

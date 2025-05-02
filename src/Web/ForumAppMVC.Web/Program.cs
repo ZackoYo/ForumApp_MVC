@@ -49,7 +49,7 @@ namespace ForumAppMVC.Web
 			services.AddControllersWithViews(
 				options =>
 				{
-					options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+					//options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
 				}).AddRazorRuntimeCompilation();
 
             services.AddRazorPages();
