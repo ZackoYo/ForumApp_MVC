@@ -46,13 +46,17 @@ namespace ForumAppMVC.Web
 					options.MinimumSameSitePolicy = SameSiteMode.None;
 				});
 
-			services.AddControllersWithViews(
-				options =>
-				{
-					//options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-				}).AddRazorRuntimeCompilation();
-
+            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()); // CSRF
+            });
+            services.AddAntiforgery(options =>
+            {
+                options.HeaderName = "X-CSRF-TOKEN";
+            });
             services.AddRazorPages();
+
 			services.AddDatabaseDeveloperPageExceptionFilter();
 
 			services.AddSingleton(configuration);
