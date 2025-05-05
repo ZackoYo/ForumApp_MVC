@@ -28,9 +28,11 @@ namespace ForumAppMVC.Services.Data
 
         public T GetByName<T>(string name)
         {
-            var category = this.categoriesRepo.All().Where(c => c.Name == name).To<T>().FirstOrDefault();
+            var category = this.categoriesRepo.All()
+                    .Where(x => x.Name.Replace(" ", "-") == name.Replace(" ", "-"))
+                    .To<T>().FirstOrDefault();
 
-                return category;
+            return category;
         }
     }
 }
