@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ForumAppMVC.Data.Common.Repositories;
 using ForumAppMVC.Data.Models;
@@ -36,6 +37,24 @@ namespace ForumAppMVC.Services.Data
                 .To<T>().FirstOrDefault();
 
             return post;
+        }
+
+        public IEnumerable<T> GetByCategoryId<T>(int categoryId, int? take = null, int skip = 0)
+        {
+            var query = this.postsRepo.All()
+                .OrderByDescending(x => x.CreatedOn)
+                .Where(x => x.CategoryId == categoryId).Skip(skip);
+            if (take.HasValue)
+            {
+                query = query.Take(take.Value);
+            }
+
+            return query.To<T>().ToList();
+        }
+
+        public int GetCountByCategoryId(int categoryId)
+        {
+            return this.postsRepo.All().Count(x => x.CategoryId == categoryId);
         }
     }
 }
