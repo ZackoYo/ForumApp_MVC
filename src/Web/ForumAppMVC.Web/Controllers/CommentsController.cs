@@ -24,7 +24,7 @@ namespace ForumAppMVC.Web.Controllers
         public async Task<IActionResult> Create(CreateCommentInputModel input)
         {
             var userId = this.userManager.GetUserId(this.User);
-            await this.commentsService.Create(input.PostId, userId, input.Content, parentId);
+            await this.commentsService.Create(input.PostId, userId, input.Content);
             return this.RedirectToAction("ById", "Posts", new { id = input.PostId });
         }
     }
