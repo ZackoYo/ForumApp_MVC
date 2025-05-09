@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using Ganss.Xss;
 using AutoMapper;
+using System.Collections.Generic;
 
 namespace ForumAppMVC.Web.ViewModels.Posts
 {
@@ -19,6 +20,8 @@ namespace ForumAppMVC.Web.ViewModels.Posts
         public string UserUserName { get; set; } //to get the author of the Post
 
         public int VotesCount { get; set; }
+
+        public IEnumerable<PostCommentViewModel> Comments { get; set; }
 
         //Create custom mapping for VotesCount
         public void CreateMappings(IProfileExpression configuration)
