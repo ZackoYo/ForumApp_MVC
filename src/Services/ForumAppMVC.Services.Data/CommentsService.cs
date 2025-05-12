@@ -1,5 +1,6 @@
 ﻿using ForumAppMVC.Data.Common.Repositories;
 using ForumAppMVC.Data.Models;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ForumAppMVC.Services.Data
@@ -25,6 +26,13 @@ namespace ForumAppMVC.Services.Data
             };
             await this.commentsRepository.AddAsync(comment);
             await this.commentsRepository.SaveChangesAsync();
+        }
+
+        public bool IsInPostId(int commentId, int postId)
+        {
+            var commentPostId = this.commentsRepository.All().Where(x => x.Id == commentId)
+                .Select(x => x.PostId).FirstOrDefault();
+            return commentPostId == postId;
         }
     }
 }
