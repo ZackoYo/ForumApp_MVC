@@ -23,7 +23,9 @@
                                  class="d-block ui-w-40 rounded-circle" alt="">
                             <div class="ml-4">
                                 <strong class="d-block">@Model.UserUserName</strong>
-                                <div class="text-muted small mt-1">@Model.CreatedOn</div>
+                                <div class="text-muted small mt-1">
+                                    <time datetime="@Model.CreatedOn.ToString("O")"></time>
+                                </div>
                             </div>
                         </div>
 
@@ -72,7 +74,9 @@
                                                          class="d-block ui-w-40 rounded-circle" alt="">
                                                     <div class="ml-4">
                                                         <strong class="d-block">@comment.UserUserName</strong>
-                                                        <div class="text-muted small mt-1">@comment.CreatedOn</div>
+                                                        <div class="text-muted small mt-1">
+                                                            <time datetime="@comment.CreatedOn.ToString("O")"></time>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
