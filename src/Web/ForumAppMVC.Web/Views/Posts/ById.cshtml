@@ -1,6 +1,55 @@
 ﻿@model ForumAppMVC.Web.ViewModels.Posts.PostViewModel
 @{
     this.ViewData["Title"] = Model.Title;
+    void DisplayComments(int? parentId)
+    {
+        var comments = this.Model.Comments.Where(x => x.ParentId == parentId);
+        if (!comments.Any())
+        {
+            return;
+        }
+
+        @foreach (var comment in comments)
+        {
+            <div class="container-fluid mt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Left Side: Profile Picture + User Info -->
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg"
+                                             class="d-block ui-w-40 rounded-circle" alt="">
+                                        <div class="ml-4">
+                                            <strong class="d-block">@comment.UserUserName</strong>
+                                            <div class="text-muted small mt-1">
+                                                <time datetime="@comment.CreatedOn.ToString("O")"></time>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end px-4 pt-3">
+                                            <button type="button" class="btn btn-secondary" onclick="showAddCommentForm(@comment.Id)">
+                                                <i class="fa fa-plus"></i>&nbsp; Replay
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <article>
+                                    @Html.Raw(comment.SanitizedContent)
+                                </article>
+                                @{ DisplayComments(comment.Id); }
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    }
 }
 
 @if (this.TempData["InfoMessage"] != null)
@@ -60,41 +109,7 @@
                     <hr />
                     <div class="clearfix"></div>
 
-                    @foreach (var comment in this.Model.Comments)
-                    {
-                        <div class="container-fluid mt-100">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div class="d-flex justify-content-between align-items-start">
-                                                <!-- Left Side: Profile Picture + User Info -->
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg"
-                                                         class="d-block ui-w-40 rounded-circle" alt="">
-                                                    <div class="ml-4">
-                                                        <strong class="d-block">@comment.UserUserName</strong>
-                                                        <div class="text-muted small mt-1">
-                                                            <time datetime="@comment.CreatedOn.ToString("O")"></time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card-body">
-                                            @Html.Raw(comment.SanitizedContent)
-                                        </div>
-                                        <div class="d-flex justify-content-end px-4 pt-3">
-                                            <button type="button" class="btn btn-secondary" onclick="showAddCommentForm(@comment.Id)">
-                                                <i class="fa fa-plus"></i>&nbsp; Replay
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
+                    @{ DisplayComments(null);}
                 </div>
 
                 @* <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
