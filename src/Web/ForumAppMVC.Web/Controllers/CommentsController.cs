@@ -2,6 +2,7 @@
 using ForumAppMVC.Data.Models;
 using ForumAppMVC.Services.Data;
 using ForumAppMVC.Web.ViewModels.Comments;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,7 @@ namespace ForumAppMVC.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create(CreateCommentInputModel input)
         {
             var parentId =

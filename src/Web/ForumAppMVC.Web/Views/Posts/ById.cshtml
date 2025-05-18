@@ -28,9 +28,12 @@
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-end px-4 pt-3">
+                                            @if (this.User.Identity.IsAuthenticated)
+                                            {
                                             <button type="button" class="btn btn-secondary" onclick="showAddCommentForm(@comment.Id)">
                                                 <i class="fa fa-plus"></i>&nbsp; Replay
                                             </button>
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -102,9 +105,12 @@
                         @Html.Raw(Model.SanitizedContent)
                     </article>
                     <div class="d-flex justify-content-end px-4 pt-3">
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
                         <button type="button" class="btn btn-primary" onclick="showAddCommentForm(0)">
                             <i class="fa fa-plus"></i>&nbsp; Comment
                         </button>
+                    }
                     </div>
                     <hr />
                     <div class="clearfix"></div>
