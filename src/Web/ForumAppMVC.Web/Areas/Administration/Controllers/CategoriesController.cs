@@ -20,5 +20,22 @@ namespace ForumAppMVC.Web.Areas.Administration.Controllers
             return View(await _context.Categories.ToListAsync());
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var category = await _context.Categories
+                    .FirstOrDefaultAsync(m => m.Id == id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            return View(category);
+        }
+
     }
 }
