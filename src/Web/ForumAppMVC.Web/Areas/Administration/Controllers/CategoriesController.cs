@@ -37,5 +37,11 @@ namespace ForumAppMVC.Web.Areas.Administration.Controllers
             return View(category);
         }
 
+        // GET: Admin/Categories/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
     }
 }
