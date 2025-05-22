@@ -1,4 +1,5 @@
-﻿using ForumAppMVC.Data;
+﻿using System.Linq;
+using ForumAppMVC.Data;
 using ForumAppMVC.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
