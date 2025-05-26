@@ -12,15 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForumAppMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250128214238_AddVotes")]
-    partial class AddVotes
+    [Migration("20250603194302_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.3")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -207,6 +207,9 @@ namespace ForumAppMVC.Data.Migrations
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
                     b.Property<int>("PostId")
                         .HasColumnType("int");
 
@@ -216,6 +219,8 @@ namespace ForumAppMVC.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("ParentId");
 
                     b.HasIndex("PostId");
 
@@ -442,6 +447,10 @@ namespace ForumAppMVC.Data.Migrations
 
             modelBuilder.Entity("ForumAppMVC.Data.Models.Comment", b =>
                 {
+                    b.HasOne("ForumAppMVC.Data.Models.Comment", "Parent")
+                        .WithMany()
+                        .HasForeignKey("ParentId");
+
                     b.HasOne("ForumAppMVC.Data.Models.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
@@ -451,6 +460,8 @@ namespace ForumAppMVC.Data.Migrations
                     b.HasOne("ForumAppMVC.Data.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
+
+                    b.Navigation("Parent");
 
                     b.Navigation("Post");
 
@@ -479,7 +490,7 @@ namespace ForumAppMVC.Data.Migrations
             modelBuilder.Entity("ForumAppMVC.Data.Models.Vote", b =>
                 {
                     b.HasOne("ForumAppMVC.Data.Models.Post", "Post")
-                        .WithMany()
+                        .WithMany("Votes")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -565,6 +576,8 @@ namespace ForumAppMVC.Data.Migrations
             modelBuilder.Entity("ForumAppMVC.Data.Models.Post", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Votes");
                 });
 #pragma warning restore 612, 618
         }
