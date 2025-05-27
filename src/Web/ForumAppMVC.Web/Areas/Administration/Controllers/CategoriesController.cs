@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForumAppMVC.Web.Areas.Administration.Controllers
 {
-    [Area("Admin")]
+    [Area("Administration")]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,7 +20,9 @@ namespace ForumAppMVC.Web.Areas.Administration.Controllers
         // GET: Admin/Categories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Categories.ToListAsync());
+            var categories = await _context.Categories.ToListAsync();
+
+            return View(categories);
         }
 
         public async Task<IActionResult> Details(int? id)
