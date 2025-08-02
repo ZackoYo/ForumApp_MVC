@@ -17,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.ResponseCompression;
 
 namespace ForumAppMVC.Web
 {
@@ -45,6 +46,15 @@ namespace ForumAppMVC.Web
 					options.CheckConsentNeeded = context => true;
 					options.MinimumSameSitePolicy = SameSiteMode.None;
 				});
+
+            services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<BrotliCompressionProvider>();
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+
+            services.AddResponseCaching();
 
             services.AddControllersWithViews();
             services.AddControllersWithViews(options =>
@@ -99,6 +109,8 @@ namespace ForumAppMVC.Web
 				app.UseHsts();
 			}
 
+            app.UseResponseCompression();
+            app.UseResponseCaching();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
