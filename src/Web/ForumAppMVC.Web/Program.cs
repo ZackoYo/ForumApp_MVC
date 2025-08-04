@@ -18,6 +18,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.Net.Http.Headers;
+using SameSiteMode = Microsoft.AspNetCore.Http.SameSiteMode;
 
 namespace ForumAppMVC.Web
 {
@@ -114,6 +116,30 @@ namespace ForumAppMVC.Web
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
+
+            // Add security headers
+            app.Use(async (context, next) =>
+            {
+                if (!context.Response.Headers.ContainsKey("X-Frame-Options"))
+                {
+                    context.Response.Headers.Append("X-Frame-Options", "DENY");
+                }
+                if (!context.Response.Headers.ContainsKey("X-Content-Type-Options"))
+                {
+                    context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
+                }
+                if (!context.Response.Headers.ContainsKey("Referrer-Policy"))
+                {
+                    context.Response.Headers.Append("Referrer-Policy", "strict-origin-when-cross-origin");
+                }
+                if (!context.Response.Headers.ContainsKey("Permissions-Policy"))
+                {
+                    context.Response.Headers.Append("Permissions-Policy",
+                        "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()");
+                }
+
+                await next();
+            });
 
 			app.UseRouting();
 
