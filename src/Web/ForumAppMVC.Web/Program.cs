@@ -113,8 +113,16 @@ namespace ForumAppMVC.Web
 
             app.UseResponseCompression();
             app.UseResponseCaching();
+
 			app.UseHttpsRedirection();
-			app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = ctx =>
+                {
+                    const int durationInSeconds = 60 * 60 * 24 * 365; // 1 year
+                    ctx.Context.Response.Headers[HeaderNames.CacheControl] = $"public,max-age={durationInSeconds}";
+                }
+            });
 			app.UseCookiePolicy();
 
             // Add security headers
