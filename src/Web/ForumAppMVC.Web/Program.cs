@@ -39,6 +39,13 @@ namespace ForumAppMVC.Web
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromDays(2);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
                 .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -150,6 +157,7 @@ namespace ForumAppMVC.Web
                 await next();
             });
 
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthentication();
