@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Http.Features
 
 @{
-    var consentFeature = this.Context.Features.Get<ITrackingConsentFeature>();
+    var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
     var showBanner = !consentFeature?.CanTrack ?? false;
     var cookieString = consentFeature?.CreateConsentCookie();
 }
@@ -10,16 +10,26 @@
 {
     <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
         We use cookies to understand how you use our site and to improve your experience. <a asp-area="" asp-controller="Home" asp-action="Privacy">Learn More</a>.
-        <button type="button" class="btn btn-primary accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
-            <span aria-hidden="true">Accept</span>
+        <button type="button" class="accept-policy btn btn-primary" data-cookie-string="@cookieString">
+            Accept
         </button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+
     <script>
-        (function () {
-            var button = document.querySelector("#cookieConsent button[data-cookie-string]");
-            button.addEventListener("click", function () {
-                document.cookie = button.dataset.cookieString;
-            }, false);
-        })();
+        document.addEventListener('DOMContentLoaded', function () {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptButton = cookieConsent.querySelector('.accept-policy');
+            
+            acceptButton.addEventListener('click', function () {
+                if (this.dataset.cookieString) {
+                    document.cookie = this.dataset.cookieString;
+                    cookieConsent.classList.remove('show');
+                    setTimeout(function() {
+                        cookieConsent.remove();
+                    }, 500);
+                }
+            });
+        });
     </script>
 }
